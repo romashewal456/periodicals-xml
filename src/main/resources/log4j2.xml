@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="pattern">%d{HH:mm:ss.SSS} %-5level %logger{1} - %msg%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${pattern}" charset="UTF-8"/>
+        </Console>
+        <File name="File" fileName="logs/periodicals.log" append="false">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" charset="UTF-8"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="ua.knu.periodicals" level="debug" additivity="false">
+            <AppenderRef ref="Console" level="info"/>
+            <AppenderRef ref="File"/>
+        </Logger>
+        <Root level="warn">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
