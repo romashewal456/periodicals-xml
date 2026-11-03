@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="papers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="paper" type="PaperType" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PaperType">
+        <xs:sequence>
+            <xs:element name="title" type="TitleType"/>
+            <xs:element name="type" type="PublicationType"/>
+            <xs:element name="monthly" type="xs:boolean"/>
+            <xs:element name="chars" type="CharsType"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attribute name="language" type="LanguageType" default="uk"/>
+    </xs:complexType>
+
+    <xs:complexType name="CharsType">
+        <xs:sequence>
+            <xs:element name="colored" type="xs:boolean"/>
+            <xs:element name="pages" type="PagesType"/>
+            <xs:element name="glossy" type="xs:boolean"/>
+            <xs:element name="subscriptionIndex" type="SubscriptionIndexType" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="TitleType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:maxLength value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PublicationType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="newspaper"/>
+            <xs:enumeration value="magazine"/>
+            <xs:enumeration value="booklet"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="PagesType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="1000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="SubscriptionIndexType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LanguageType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="uk"/>
+            <xs:enumeration value="en"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

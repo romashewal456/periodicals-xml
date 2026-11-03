@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<papers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="papers.xsd">
+    <paper id="p1">
+        <title>Київський вісник</title>
+        <type>newspaper</type>
+        <monthly>false</monthly>
+        <chars>
+            <colored>false</colored>
+            <pages>16</pages>
+            <glossy>false</glossy>
+            <subscriptionIndex>61001</subscriptionIndex>
+        </chars>
+    </paper>
+    <paper id="p2" language="en">
+        <title>Tech Review</title>
+        <type>magazine</type>
+        <monthly>true</monthly>
+        <chars>
+            <colored>true</colored>
+            <pages>84</pages>
+            <glossy>true</glossy>
+            <subscriptionIndex>74215</subscriptionIndex>
+        </chars>
+    </paper>
+    <paper id="p3">
+        <title>Відпочинок у Карпатах</title>
+        <type>booklet</type>
+        <monthly>false</monthly>
+        <chars>
+            <colored>true</colored>
+            <pages>8</pages>
+            <glossy>true</glossy>
+        </chars>
+    </paper>
+    <paper id="p4">
+        <title>Сільські новини</title>
+        <type>newspaper</type>
+        <monthly>true</monthly>
+        <chars>
+            <colored>true</colored>
+            <pages>12</pages>
+            <glossy>false</glossy>
+            <subscriptionIndex>30517</subscriptionIndex>
+        </chars>
+    </paper>
+    <paper id="p5">
+        <title>Наука і життя</title>
+        <type>magazine</type>
+        <monthly>true</monthly>
+        <chars>
+            <colored>false</colored>
+            <pages>64</pages>
+            <glossy>false</glossy>
+            <subscriptionIndex>22094</subscriptionIndex>
+        </chars>
+    </paper>
+    <paper id="p6" language="en">
+        <title>City Guide</title>
+        <type>booklet</type>
+        <monthly>false</monthly>
+        <chars>
+            <colored>true</colored>
+            <pages>24</pages>
+            <glossy>false</glossy>
+        </chars>
+    </paper>
+</papers>
